@@ -8,10 +8,10 @@ export default function Home() {
         <Head>
           <title>Digitosys</title>
         </Head>
-        <h1 className="text-4xl font-bold text-center mb-4 text-[#dc5777]">
-          Welcome to Digitosys Dashboard
+        <h1 className="text-4xl font-sans font-bold text-center mb-4 text-[#dc5777]">
+          Welcome to <span className='font-extrabold font-serif text-[#dc5777]'>Digitosys</span> Dashboard
         </h1>
-        <p className="text-center text-gray-700">
+        <p className="text-center  text-gray-700">
           Your gateway to a world of digital possibilities.
         </p>
         <div className="mt-4 flex justify-center">

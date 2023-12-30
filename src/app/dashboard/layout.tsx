@@ -39,7 +39,7 @@ console.log(pathname, 'pathname>>>>>');
                 <Link
                   className={`${
                     pathname != "/" ? "text-[#dc5777]" : "text-[#23a888]"
-                  } text-xl font-bold text-[#dc5777] font-mono hover:text-[#dc5777]`}
+                  } text-xl font-bold text-[#dc5777] font-sans hover:text-[#dc5777]`}
                   href="/"
                 >
                   Home
@@ -51,7 +51,7 @@ console.log(pathname, 'pathname>>>>>');
                     pathname != "/products"
                       ? "text-[#dc5777]"
                       : "text-[#23a888]"
-                  } text-xl font-bold text-[#dc5777] font-mono hover:text-[#dc5777]`}
+                  } text-xl font-bold text-[#dc5777] font-sans hover:text-[#dc5777]`}
                   href="/products"
                 >
                   Products
@@ -63,7 +63,7 @@ console.log(pathname, 'pathname>>>>>');
                     pathname != "/dashboard"
                       ? "text-[#dc5777]"
                       : "text-[#23a888]"
-                  } text-xl font-bold text-[#dc5777] font-mono hover:text-[#dc5777]`}
+                  } text-xl font-bold text-[#dc5777] font-sans hover:text-[#dc5777]`}
                   href="/dashboard"
                 >
                   Dashboard
@@ -79,7 +79,7 @@ console.log(pathname, 'pathname>>>>>');
               <Link
                 className={`${
                   pathname != "/" ? "text-[#dc5777]" : "text-[#23a888]"
-                } text-xl font-bold text-[#dc5777] font-mono hover:text-[#dc5777]`}
+                } text-xl font-bold text-[#dc5777] font-sans hover:text-[#dc5777]`}
                 href="/"
               >
                 Home
@@ -89,7 +89,7 @@ console.log(pathname, 'pathname>>>>>');
               <Link
                 className={`${
                   pathname != "/product" ? "text-[#dc5777]" : "text-[#23a888]"
-                } text-xl font-bold text-[#dc5777] font-mono hover:text-[#dc5777]`}
+                } text-xl font-bold text-[#dc5777] font-sans hover:text-[#dc5777]`}
                 href="/product"
               >
                 Product
@@ -99,7 +99,7 @@ console.log(pathname, 'pathname>>>>>');
               <Link
                 className={`${
                   pathname != "/dashboard" ? "text-[#dc5777]" : "text-[#23a888]"
-                } text-xl font-bold text-[#dc5777] font-mono hover:text-[#dc5777]`}
+                } text-xl font-bold text-[#dc5777] font-sans hover:text-[#dc5777]`}
                 href="/dashboard"
               >
                 Dashboard
@@ -111,7 +111,7 @@ console.log(pathname, 'pathname>>>>>');
           <Link
             className={`${
               pathname != "/login" ? "text-[#dc5777]" : "text-[#23a888]"
-            } text-xl font-bold text-[#dc5777] font-mono hover:text-[#dc5777]`}
+            } text-xl font-bold text-[#dc5777] font-sans hover:text-[#dc5777]`}
             href="/login"
           >
             Login
