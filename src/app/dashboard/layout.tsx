@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import path from "path";
 
 export default function DashboardLayout({
   children,
@@ -10,10 +9,10 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-
+console.log(pathname, 'pathname>>>>>');
   return (
     <section>
-      <div className="navbar bg-black bg-opacity-10 px-5">
+      <div className="navbar bg-black bg-opacity-5 px-5">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
