@@ -10,7 +10,6 @@ export default function AdminOverview() {
     const fetchData = async () => {
       try {
         const response = await fetch("/data.json");
-        json;
         const parsedData = await response.json();
         setData(parsedData);
       } catch (error) {}

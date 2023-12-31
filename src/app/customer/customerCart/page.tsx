@@ -20,7 +20,7 @@ export default function CustomerCart() {
         </svg>
 
         <h3 className="text-xl font-semibold text-[#23a888]">
-          You don't have any items in your cart yet.
+          You do not have any items in your cart yet.
         </h3>
 
         <button className="mt-4 px-4 py-2 bg-[#23a888] hover:bg-[#0c352b] text-white font-medium rounded-md hover:bg-#1e9c7e focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-#1e9c7e">

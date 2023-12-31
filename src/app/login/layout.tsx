@@ -70,7 +70,7 @@ export default function LoginLayout({
               </li>
             </ul>
           </div>
-          <Image src="/icon.png" height={50} width={50} alt="My Icon" />
+          <Image src="/icon.png" height={100} width={100} alt="My Icon" />
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

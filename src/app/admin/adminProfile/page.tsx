@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function AdminProfile() {
   return (
     <div className="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
@@ -9,7 +11,7 @@ export default function AdminProfile() {
 
       <div className="flex items-center mb-4">
         <div className="w-36 h-36 rounded mr-4">
-          <img
+          <Image height={100} width={100}
             src="https://www.svgrepo.com/show/384674/account-avatar-profile-user-11.svg"
             alt=""
           />{" "}
