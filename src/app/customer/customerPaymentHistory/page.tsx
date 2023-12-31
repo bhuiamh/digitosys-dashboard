@@ -1,4 +1,4 @@
-export default function customerPaymentHistory() {
+export default function CustomerPaymentHistory() {
   return (
     <div className="bg-white py-8 px-4 shadow-md rounded-lg">
       <h2 className="text-2xl font-bold mb-4 text-center text-[#23a888]">

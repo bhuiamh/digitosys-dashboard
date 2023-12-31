@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-export default function adminLayout({
+export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode;

@@ -2,7 +2,7 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 
-export default function adminOverview() {
+export default function AdminOverview() {
   // Fetching Data
   const [data, setData] = useState(null);
 

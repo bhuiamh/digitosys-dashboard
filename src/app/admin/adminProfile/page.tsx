@@ -1,6 +1,6 @@
 "use client";
 
-export default function adminProfile() {
+export default function AdminProfile() {
   return (
     <div className="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
       <div className="text-center text-[#dc5777] text-2xl font-bold mb-6">

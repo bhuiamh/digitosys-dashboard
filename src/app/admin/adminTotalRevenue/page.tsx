@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function adminTotalRevenue() {
+export default function AdminTotalRevenue() {
   return (
     <div className="flex items-center justify-center">
       <Head>

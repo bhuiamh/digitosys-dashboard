@@ -89,7 +89,7 @@ export default function ProductsLayout({
                 className={`${
                   pathname != "/products" ? "text-[#dc5777]" : "text-[#23a888]"
                 } text-xl font-bold text-[#dc5777] font-sans hover:text-[#dc5777]`}
-                href="/product"
+                href="/products"
               >
                 Product
               </Link>

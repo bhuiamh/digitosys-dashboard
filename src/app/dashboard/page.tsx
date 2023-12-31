@@ -1,7 +1,7 @@
 "use client";
 import Head from "next/head";
 import Link from "next/link";
-export default function dashboard() {
+export default function Dashboard() {
   return (
     <main>
       <div className="flex items-center justify-center mt-3">

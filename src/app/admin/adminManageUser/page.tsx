@@ -1,7 +1,7 @@
 import Head from "next/head";
 
-export default function adminManageUser() {
-  
+export default function AdminManageUser() {
+
   return (
     <div className="flex items-center justify-center">
       <Head>
