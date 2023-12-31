@@ -1,7 +1,6 @@
 "use client";
 import Head from "next/head";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 export default function dashboard() {
   return (
     <main>
@@ -28,12 +27,14 @@ export default function dashboard() {
               />
             </svg>
 
-           
             <p className="text-lg font-semibold text-gray-600">
               You need to be logged in to access this content.
             </p>
 
-            <Link href='/login' className="mt-4 px-4 py-2 bg-[#23a888] hover:bg-[#0c352b] text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#23a888]">
+            <Link
+              href="/login"
+              className="mt-4 px-4 py-2 bg-[#23a888] hover:bg-[#0c352b] text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#23a888]"
+            >
               Login
             </Link>
           </div>

@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 
 export default function adminTotalRevenue() {
   return (
@@ -13,18 +13,15 @@ export default function adminTotalRevenue() {
         </h2>
 
         <div className="flex flex-col items-center justify-center text-center">
-          <h1
-            className="text-8xl font-extrabold mx-auto mb-4 text-[#dc5777]"
-            >x
+          <h1 className="text-8xl font-extrabold mx-auto mb-4 text-[#dc5777]">
+            x
           </h1>
 
           <h3 className="text-xl font-semibold text-[#23a888]">
             Stay tuned for exciting updates!
           </h3>
 
-          <button
-            className="mt-4 px-4 py-2 bg-[#23a888] hover:bg-[#0c352b] text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-#1e9c7e"
-          >
+          <button className="mt-4 px-4 py-2 bg-[#23a888] hover:bg-[#0c352b] text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-#1e9c7e">
             Get Notified
           </button>
         </div>

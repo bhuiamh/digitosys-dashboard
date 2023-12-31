@@ -22,19 +22,19 @@ export default function Login() {
         const response = await fetch("/data.json"); // Assuming the file is at /public/data.json
         const parsedData = await response.json();
         setData(parsedData);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
+      } catch (error) {}
     };
 
     fetchData();
   }, []);
 
   if (!data) {
-    // Data is still loading
-    return <div>Loading...</div>;
+    return (
+      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-md p-4 text-center">
+        <h2 className="text-lg font-medium text-gray-900">Loading...</h2>
+      </div>
+    );
   }
-  // console.log(data.users, ">>>>>medata");
 
   const foundUser = data.users.find((user) => {
     return (
@@ -45,16 +45,6 @@ export default function Login() {
 
   // Handle form submission
   const handleSubmit = async (userData) => {
-    // const foundUser = data.users.find(user => {
-    //   return user.details.email === formData.email && user.password === formData.password;
-    // });
-    // if (foundUser) {
-    //   <Link href={`/${user.role}`}>
-
-    // }
-    // else{
-    //   console.log('User not Ok>>>>>>>');
-    // }
     userData.preventDefault();
   };
 
@@ -244,8 +234,6 @@ export default function Login() {
                   Password: admin_password
                 </p>
               </div>
-
-              
             </div>
           </div>
 

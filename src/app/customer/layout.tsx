@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import Head from "next/head";
 
 export default function customerLayout({
   children,
@@ -15,7 +14,6 @@ export default function customerLayout({
   };
 
   const handleLogOut = () => {
-    // Implement your logout logic here
   };
 
   const customerItem = (
@@ -84,7 +82,9 @@ export default function customerLayout({
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="sm:hidden mx-3">
-              <div className="flex flex-col items-center mt-2">{customerItem}</div>
+              <div className="flex flex-col items-center mt-2">
+                {customerItem}
+              </div>
             </div>
           )}
         </nav>
@@ -94,7 +94,7 @@ export default function customerLayout({
           <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
               <div className="p-6 bg-white border-b border-gray-200">
-                {/* Your content (outlet) goes here */}
+                {/* Outlet Here */}
                 <div>{children}</div>
               </div>
             </div>

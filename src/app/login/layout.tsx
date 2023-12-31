@@ -9,7 +9,6 @@ export default function LoginLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-console.log(pathname, 'pathname>>>>>');
   return (
     <section>
       <div className="navbar bg-black bg-opacity-5 px-5">
