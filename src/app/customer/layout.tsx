@@ -20,22 +20,22 @@ export default function customerLayout({
 
   const customerItem = (
     <>
-      <Link onClick={toggleMenu} href="customer/cart">
+      <Link onClick={toggleMenu} href="../customer/customerCart">
         My Cart
       </Link>
-      <Link onClick={toggleMenu} href="customer/purchased">
+      <Link onClick={toggleMenu} href="../customer/customerParchesHistory">
         Purchased History
       </Link>
-      <Link onClick={toggleMenu} href="customer/paymentHistory">
+      <Link onClick={toggleMenu} href="../customer/customerPaymentHistory">
         Payment History
       </Link>
       <Link onClick={toggleMenu} href="/">
         Home
       </Link>
-      <Link onClick={toggleMenu} href="customer/profile">
+      <Link onClick={toggleMenu} href="../customer/customerProfile">
         My Profile
       </Link>
-      <Link onClick={toggleMenu} href="customer/changePassword">
+      <Link onClick={toggleMenu} href="../customer/changePassword">
         Change Password
       </Link>
       <Link onClick={handleLogOut} href="/">
@@ -49,7 +49,7 @@ export default function customerLayout({
         {/* Dashboard Menu */}
         <nav className="bg-white shadow-2xl md:w-1/4 lg:w-1/4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
+            <div className="flex items-center justify-between">
               <div className="flex">
                 <div className="sm:hidden">
                   {/* Mobile Menu Button */}
@@ -65,7 +65,7 @@ export default function customerLayout({
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="w-6 h-6"
+                      className="w-6 h-6"
                     >
                       <path
                         stroke-linecap="round"
@@ -75,7 +75,7 @@ export default function customerLayout({
                     </svg>
                   </button>
                 </div>
-                <div className="hidden md:flex flex-col justify-center font-semibold text-[#23a888] md:space-y-4">
+                <div className="hidden md:flex flex-col justify-center font-semibold text-[#23a888] md:space-y-4 mt-8">
                   {customerItem}
                 </div>
               </div>
