@@ -1,20 +1,6 @@
 {
-  "/_not-found": "app/_not-found.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/not-found": "app/not-found.js",
   "/page": "app/page.js",
-  "/admin/adminManageUser/page": "app/admin/adminManageUser/page.js",
-  "/admin/adminTotalRevenue/page": "app/admin/adminTotalRevenue/page.js",
-  "/admin/customerProfile/page": "app/admin/customerProfile/page.js",
-  "/admin/page": "app/admin/page.js",
-  "/admin/changePassword/page": "app/admin/changePassword/page.js",
-  "/customer/customerCart/page": "app/customer/customerCart/page.js",
-  "/customer/changePassword/page": "app/customer/changePassword/page.js",
-  "/admin/adminOverview/page": "app/admin/adminOverview/page.js",
-  "/customer/customerParchesHistory/page": "app/customer/customerParchesHistory/page.js",
-  "/customer/customerPaymentHistory/page": "app/customer/customerPaymentHistory/page.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/customer/page": "app/customer/page.js",
-  "/customer/customerProfile/page": "app/customer/customerProfile/page.js",
   "/login/page": "app/login/page.js",
-  "/products/page": "app/products/page.js"
+  "/customer/page": "app/customer/page.js"
 }

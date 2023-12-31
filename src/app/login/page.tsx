@@ -178,11 +178,12 @@ export default function Login() {
             type="submit"
             className="bg-[#dc5777] text-white px-4 py-2 rounded font-sans font-bold hover:bg-[#7a232c] focus:outline-none focus:shadow-outline"
           >
-            {foundUser ? (
-              <Link href={`/${foundUser?.role}`}>Log In</Link>
-            ) : (
-              "Log In"
-            )}
+           
+             <Link href="/customer">Log In</Link>
+
+            
+            
+           
           </button>
 
           {/* Social login buttons */}
