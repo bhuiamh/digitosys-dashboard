@@ -50,7 +50,7 @@ export default function AdminOverview() {
                   <p className="text-lg font-semibold mb-2 text-[#dc5777]">
                     {key}
                   </p>
-                  <p className="text-2xl font-bold">{value}</p>
+                  <p className="text-2xl font-bold">{value as any}</p>
                 </div>
               ))}
             </div>
@@ -64,7 +64,7 @@ export default function AdminOverview() {
               {activityData.map(({ timestamp, activity, user }, index) => (
                 <li key={index} className="mb-2">
                   <p>
-                    <span className="font-bold">{user}</span> {activity} on{" "}
+                    <span className="font-bold">{user}</span> {activity as any} on{" "}
                     {new Date(timestamp).toLocaleString()}
                   </p>
                 </li>
