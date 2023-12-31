@@ -3,4 +3,4 @@ import Link from 'next/link';
 
 export default function Customer() {
   return (
-    <div >Customer Page</div>)}
+    <div >Customer Page  11111111111111</div>)}
