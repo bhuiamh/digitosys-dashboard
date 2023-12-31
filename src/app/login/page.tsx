@@ -37,7 +37,7 @@ export default function Login() {
     );
   }
 
-  const foundUser: User | undefined  = data.users.find((user: User) => {
+  const foundUser: User | undefined  = data.users &&  data.users.find((user: User) => {
     if (
       user.details.email === formData.email &&
       user.password === formData.password
