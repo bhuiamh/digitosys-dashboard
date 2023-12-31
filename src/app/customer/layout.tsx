@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-export default function customerLayout({
+export default function CustomerLayout({
   children,
 }: {
   children: React.ReactNode;
