@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { Data } from "../admin/adminOverview/type";
+import { Data, User } from "../admin/adminOverview/type";
 
 export default function Login() {
   const [data, setData] = useState<Data>({} as Data);
@@ -12,7 +12,7 @@ export default function Login() {
   const [isOpen, setIsOpen] = useState(false);
 
   // State for form data and password visibility
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{email: string, password: string}>({
     email: "",
     password: "",
   });
@@ -37,11 +37,12 @@ export default function Login() {
     );
   }
 
-  const foundUser = data.users.find((user) => {
-    return (
+  const foundUser: User | undefined  = data.users.find((user: User) => {
+    if (
       user.details.email === formData.email &&
       user.password === formData.password
-    );
+    ) return user;
+    else {}
   });
 
   // Handle form submission
@@ -178,7 +179,7 @@ export default function Login() {
             className="bg-[#dc5777] text-white px-4 py-2 rounded font-sans font-bold hover:bg-[#7a232c] focus:outline-none focus:shadow-outline"
           >
             {foundUser ? (
-              <Link href={`/${foundUser.role}`}>Log In</Link>
+              <Link href={`/${foundUser?.role}`}>Log In</Link>
             ) : (
               "Log In"
             )}
