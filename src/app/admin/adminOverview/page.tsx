@@ -28,7 +28,7 @@ export default function AdminOverview() {
     );
   }
 
-  const { dashboard: {stats, activityData}, ecommerceData: {products, orders} } = data;
+  const { dashboard: {stats:any, activityData}, ecommerceData: {products, orders} } = data;
 
   return (
     <main>
