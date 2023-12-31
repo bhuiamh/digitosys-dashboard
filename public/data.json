@@ -28,10 +28,11 @@
       }
     ]
   },
-  "users": {
-    "customer": {
+  "users": [{
+
       "username": "customer_user",
       "password": "customer_password",
+      "role": "customer",
       "details": {
         "dateOfBirth": "1990-05-15",
         "email": "customer@example.com",
@@ -39,11 +40,12 @@
         "gender": "Male",
         "address": "123 Main St, Cityville",
         "photo": "customer_photo.jpg"
-      }
-    },
-    "seller": {
+      
+    }},{
       "username": "seller_user",
       "password": "seller_password",
+      "role": "seller",
+
       "details": {
         "dateOfBirth": "1985-08-20",
         "email": "seller@example.com",
@@ -51,10 +53,10 @@
         "gender": "Female",
         "address": "456 Market St, Townsville",
         "photo": "seller_photo.jpg"
-      }
-    },
-    "admin": {
+      }},
+{
       "username": "admin_user",
+      "role": "admin",
       "password": "admin_password",
       "details": {
         "dateOfBirth": "1980-02-10",
@@ -65,7 +67,7 @@
         "photo": "admin_photo.jpg"
       }
     }
-  },
+],
   "ecommerceData": {
     "products": [
       {

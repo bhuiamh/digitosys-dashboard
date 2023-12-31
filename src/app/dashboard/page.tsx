@@ -28,7 +28,7 @@ export default function User() {
 
   const {
     dashboard: { stats, graphData, activityData },
-    users: { customer, seller, admin },
+    // users: { customer, seller, admin },
     ecommerceData: { products, orders, reviews },
   } = data;
 
@@ -70,25 +70,6 @@ export default function User() {
               ))}
             </ul>
           </div>
-
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">User Details</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[customer, seller, admin].map((user, index) => (
-                <div key={index} className="bg-white p-4 rounded shadow">
-                  <p className="text-lg font-semibold mb-2">{user.username}</p>
-                  <ul>
-                    {Object.entries(user.details).map(([key, value]) => (
-                      <li key={key} className="mb-1">
-                        <span className="font-bold">{key}:</span> {value}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-
           <div className="mb-8">
             <h2 className="text-2xl font-bold mb-4">E-commerce Data</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

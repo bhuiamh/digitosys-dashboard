@@ -1,23 +1,62 @@
 "use client";
 import Link from "next/link";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Login() {
+  const [data, setData] = useState(null);
+  // const users = data.users;
+
+  //   Modal Operation
+  const [isOpen, setIsOpen] = useState(false);
+
   // State for form data and password visibility
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
   const [showPassword, setShowPassword] = useState(false);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/data.json"); // Assuming the file is at /public/data.json
+        const parsedData = await response.json();
+        setData(parsedData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
+    fetchData();
+  }, []);
+
+  if (!data) {
+    // Data is still loading
+    return <div>Loading...</div>;
+  }
+// console.log(data.users, ">>>>>medata");
+  
+const foundUser = data.users.find(user => {
+  return user.details.email === formData.email && user.password === formData.password;
+});
+
+  
   // Handle form submission
   const handleSubmit = async (userData) => {
+
+   
+    // const foundUser = data.users.find(user => {
+    //   return user.details.email === formData.email && user.password === formData.password;
+    // });
+    // if (foundUser) {
+    //   <Link href={`/${user.role}`}>
+      
+    // }
+    // else{
+    //   console.log('User not Ok>>>>>>>');
+    // }
     userData.preventDefault();
   };
-
-  //   Modal Operation
-  const [isOpen, setIsOpen] = useState(false);
 
   const handleModalOpen = () => setIsOpen(true);
   const handleModalClose = () => setIsOpen(false);
@@ -39,18 +78,17 @@ export default function Login() {
         <form onSubmit={handleSubmit}>
           {/* Email field */}
           <div className="mb-4">
-            
             <label
               htmlFor="email"
               className="block text-gray-700 font-sans font-bold mb-2"
             >
               Email
               <button
-              onClick={handleModalOpen}
-              className="text-sm font-sans ml-4 font-medium text-[#23a888]"
-            >
-              See Credentials
-            </button>
+                onClick={handleModalOpen}
+                className="text-sm font-sans ml-4 font-medium text-[#23a888]"
+              >
+                See Credentials
+              </button>
             </label>
             <input
               type="email"
@@ -72,7 +110,7 @@ export default function Login() {
             >
               Password
             </label>
-            
+
             <input
               type={showPassword ? "text" : "password"}
               id="password"
@@ -145,11 +183,17 @@ export default function Login() {
 
           {/* Login button */}
           <button
-            type="submit"
-            className="bg-[#dc5777] text-white px-4 py-2 rounded font-sans font-bold hover:bg-[#7a232c] focus:outline-none focus:shadow-outline"
-          >
-            Log In
-          </button>
+      type="submit"
+      className="bg-[#dc5777] text-white px-4 py-2 rounded font-sans font-bold hover:bg-[#7a232c] focus:outline-none focus:shadow-outline"
+    >
+      {foundUser ? (
+        <Link href={`/${foundUser.role}`}>
+          Log In
+        </Link>
+      ) : (
+        'Log In'
+      )}
+    </button>
 
           {/* Social login buttons */}
           <div className="mt-6">
