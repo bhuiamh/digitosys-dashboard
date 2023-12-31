@@ -6,10 +6,6 @@
       "totalOrders": 500,
       "revenue": "$50,000"
     },
-    "graphData": {
-      "labels": ["Jan", "Feb", "Mar", "Apr", "May"],
-      "values": [150, 200, 180, 250, 300]
-    },
     "activityData": [
       {
         "timestamp": "2023-01-01T12:00:00Z",
@@ -28,8 +24,8 @@
       }
     ]
   },
-  "users": [{
-
+  "users": [
+    {
       "username": "customer_user",
       "password": "customer_password",
       "role": "customer",

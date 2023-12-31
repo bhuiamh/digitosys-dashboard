@@ -1,16 +1,17 @@
 "use client";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import { Data } from "./type";
 
 export default function AdminOverview() {
   // Fetching Data
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<Data>({} as Data);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("/data.json");
-        const parsedData = await response.json();
+        const parsedData: Data = await response.json();
         setData(parsedData);
       } catch (error) {}
     };
@@ -27,10 +28,7 @@ export default function AdminOverview() {
     );
   }
 
-  const {
-    dashboard: { stats, graphData, activityData },
-    ecommerceData: { products, orders, reviews },
-  } = data;
+  const { dashboard: {stats, activityData}, ecommerceData: {products, orders} } = data;
 
   return (
     <main>
