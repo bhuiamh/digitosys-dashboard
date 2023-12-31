@@ -2,9 +2,10 @@
 import Link from "next/link";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import { Data } from "../admin/adminOverview/type";
 
 export default function Login() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<Data>({} as Data);
   // const users = data.users;
 
   //   Modal Operation
@@ -20,7 +21,7 @@ export default function Login() {
     const fetchData = async () => {
       try {
         const response = await fetch("/data.json"); // Assuming the file is at /public/data.json
-        const parsedData = await response.json();
+        const parsedData: Data = await response.json();
         setData(parsedData);
       } catch (error) {}
     };
@@ -44,7 +45,7 @@ export default function Login() {
   });
 
   // Handle form submission
-  const handleSubmit = async (userData) => {
+  const handleSubmit = async (userData: any) => {
     userData.preventDefault();
   };
 
