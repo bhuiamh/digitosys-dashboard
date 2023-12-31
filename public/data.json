@@ -1,0 +1,119 @@
+{
+  "dashboard": {
+    "stats": {
+      "totalUsers": 1000,
+      "activeUsers": 750,
+      "totalOrders": 500,
+      "revenue": "$50,000"
+    },
+    "graphData": {
+      "labels": ["Jan", "Feb", "Mar", "Apr", "May"],
+      "values": [150, 200, 180, 250, 300]
+    },
+    "activityData": [
+      {
+        "timestamp": "2023-01-01T12:00:00Z",
+        "activity": "Logged in",
+        "user": "John Doe"
+      },
+      {
+        "timestamp": "2023-01-02T14:30:00Z",
+        "activity": "Added a new product",
+        "user": "Jane Smith"
+      },
+      {
+        "timestamp": "2023-01-03T10:45:00Z",
+        "activity": "Placed an order",
+        "user": "Bob Johnson"
+      }
+    ]
+  },
+  "users": {
+    "customer": {
+      "username": "customer_user",
+      "password": "customer_password",
+      "details": {
+        "dateOfBirth": "1990-05-15",
+        "email": "customer@example.com",
+        "phone": "123-456-7890",
+        "gender": "Male",
+        "address": "123 Main St, Cityville",
+        "photo": "customer_photo.jpg"
+      }
+    },
+    "seller": {
+      "username": "seller_user",
+      "password": "seller_password",
+      "details": {
+        "dateOfBirth": "1985-08-20",
+        "email": "seller@example.com",
+        "phone": "987-654-3210",
+        "gender": "Female",
+        "address": "456 Market St, Townsville",
+        "photo": "seller_photo.jpg"
+      }
+    },
+    "admin": {
+      "username": "admin_user",
+      "password": "admin_password",
+      "details": {
+        "dateOfBirth": "1980-02-10",
+        "email": "admin@example.com",
+        "phone": "555-123-4567",
+        "gender": "Other",
+        "address": "789 Admin Rd, Admin City",
+        "photo": "admin_photo.jpg"
+      }
+    }
+  },
+  "ecommerceData": {
+    "products": [
+      {
+        "id": 1,
+        "name": "Smartphone",
+        "price": "$599.99",
+        "stock": 50
+      },
+      {
+        "id": 2,
+        "name": "Laptop",
+        "price": "$999.99",
+        "stock": 30
+      },
+      {
+        "id": 3,
+        "name": "Headphones",
+        "price": "$99.99",
+        "stock": 100
+      }
+    ],
+    "orders": [
+      {
+        "orderNumber": "ORD123456",
+        "date": "2023-01-10T15:30:00Z",
+        "total": "$699.98",
+        "customer": "customer_user"
+      },
+      {
+        "orderNumber": "ORD123457",
+        "date": "2023-01-12T11:45:00Z",
+        "total": "$1,199.99",
+        "customer": "customer_user"
+      }
+    ],
+    "reviews": [
+      {
+        "productID": 1,
+        "customer": "customer_user",
+        "rating": 5,
+        "comment": "Great smartphone! Highly recommended."
+      },
+      {
+        "productID": 2,
+        "customer": "customer_user",
+        "rating": 4,
+        "comment": "Good laptop, fast delivery."
+      }
+    ]
+  }
+}
