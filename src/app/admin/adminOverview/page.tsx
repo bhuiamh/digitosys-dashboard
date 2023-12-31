@@ -2,6 +2,7 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { Data } from "./type";
+import { Stats } from "fs";
 
 export default function AdminOverview() {
   // Fetching Data
@@ -27,9 +28,14 @@ export default function AdminOverview() {
       </div>
     );
   }
+  
+  const stats = data?.dashboard?.stats;
+  const activityData = data?.dashboard?.activityData;
+  const products = data?.ecommerceData?.products;
+  const orders = data?.ecommerceData?.orders
 
-  const { dashboard: {stats:any, activityData}, ecommerceData: {products, orders} } = data;
 
+console.log(stats,"stats >>>>>>>");
   return (
     <main>
       <div className="bg-gray-100">
@@ -43,7 +49,7 @@ export default function AdminOverview() {
               Dashboard Overview
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {Object.entries(stats).map(([key, value]) => (
+              {stats && Object.entries(stats).map(([key, value]) => (
                 <div key={key} className="bg-white p-4 rounded-lg shadow-md">
                   <p className="text-lg font-semibold mb-2 text-[#dc5777]">
                     {key}
@@ -59,7 +65,7 @@ export default function AdminOverview() {
               Recent Activity
             </h2>
             <ul className="list-disc pl-6">
-              {activityData.map(({ timestamp, activity, user }, index) => (
+              {activityData?.map(({ timestamp, activity, user }, index) => (
                 <li key={index} className="mb-2">
                   <p>
                     <span className="font-bold">{user}</span> {activity as any} on{" "}
@@ -80,7 +86,7 @@ export default function AdminOverview() {
                   Products
                 </h3>
                 <ul>
-                  {products.map((product) => (
+                  {products?.map((product) => (
                     <li key={product.id} className="mb-2">
                       <span className="font-bold">{product.name}:</span>{" "}
                       {product.price} - Stock: {product.stock}
@@ -93,7 +99,7 @@ export default function AdminOverview() {
                   Orders
                 </h3>
                 <ul>
-                  {orders.map((order) => (
+                  {orders?.map((order) => (
                     <li key={order.orderNumber} className="mb-2">
                       Order {order.orderNumber}: {order.total} by{" "}
                       {order.customer} on{" "}
