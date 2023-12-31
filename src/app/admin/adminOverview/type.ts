@@ -20,7 +20,7 @@ interface UserDetails {
     photo: string,
 }
 
-interface User{
+export interface User{
     username: string,
     password: string,
     role: string,
