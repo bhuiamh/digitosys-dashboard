@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export default function CustomerProfile() {
+export default function adminProfile() {
     return (
         <div className="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
         <div className="text-center text-[#dc5777] text-2xl font-bold mb-6">User Information</div>

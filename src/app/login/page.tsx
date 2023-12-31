@@ -34,23 +34,23 @@ export default function Login() {
     // Data is still loading
     return <div>Loading...</div>;
   }
-// console.log(data.users, ">>>>>medata");
-  
-const foundUser = data.users.find(user => {
-  return user.details.email === formData.email && user.password === formData.password;
-});
+  // console.log(data.users, ">>>>>medata");
 
-  
+  const foundUser = data.users.find((user) => {
+    return (
+      user.details.email === formData.email &&
+      user.password === formData.password
+    );
+  });
+
   // Handle form submission
   const handleSubmit = async (userData) => {
-
-   
     // const foundUser = data.users.find(user => {
     //   return user.details.email === formData.email && user.password === formData.password;
     // });
     // if (foundUser) {
     //   <Link href={`/${user.role}`}>
-      
+
     // }
     // else{
     //   console.log('User not Ok>>>>>>>');
@@ -183,17 +183,15 @@ const foundUser = data.users.find(user => {
 
           {/* Login button */}
           <button
-      type="submit"
-      className="bg-[#dc5777] text-white px-4 py-2 rounded font-sans font-bold hover:bg-[#7a232c] focus:outline-none focus:shadow-outline"
-    >
-      {foundUser ? (
-        <Link href={`/${foundUser.role}`}>
-          Log In
-        </Link>
-      ) : (
-        'Log In'
-      )}
-    </button>
+            type="submit"
+            className="bg-[#dc5777] text-white px-4 py-2 rounded font-sans font-bold hover:bg-[#7a232c] focus:outline-none focus:shadow-outline"
+          >
+            {foundUser ? (
+              <Link href={`/${foundUser.role}`}>Log In</Link>
+            ) : (
+              "Log In"
+            )}
+          </button>
 
           {/* Social login buttons */}
           <div className="mt-6">
@@ -220,15 +218,37 @@ const foundUser = data.users.find(user => {
       </div>
       {isOpen && (
         <div
-          className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl overflow-y-auto"
+          className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  rounded-lg shadow-xl overflow-y-auto"
           style={{ width: "50vw", height: "50vh" }}
         >
-          <div className="p-4">
-            <h2 className="text-2xl font-bold mb-4">Login Credentials</h2>
-            <p className="text-gray-700">For User</p>
-            <p className="text-gray-700">For Admin</p>
-            <p className="text-gray-700">For Consumer</p>
+          <div className="bg-slate-500 p-4 rounded-lg shadow-md">
+            <h2 className="text-2xl text-[#dc5777] font-bold mb-6 text-center">
+              Login Credentials
+            </h2>
+
+            <div className="grid  grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-gray-100 p-4 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold mb-2">Customer</h3>
+                <p className="text-gray-700">
+                  Email: customer@example.com
+                  <br />
+                  Password: customer_password
+                </p>
+              </div>
+
+              <div className="bg-gray-100 p-4 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold mb-2">Admin</h3>
+                <p className="text-gray-700">
+                  Email: admin@example.com
+                  <br />
+                  Password: admin_password
+                </p>
+              </div>
+
+              
+            </div>
           </div>
+
           <button
             className="absolute top-0 right-0 m-4 text-red-700 hover:text-gray-700 text-2xl focus:outline-none focus:text-gray-700"
             onClick={handleModalClose}

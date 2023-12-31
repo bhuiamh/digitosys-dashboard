@@ -2,101 +2,40 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-export default function User() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/data.json"); // Assuming the file is at /public/data.json
-        const parsedData = await response.json();
-        setData(parsedData);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  console.log(data, "data>>>>>>>");
-
-  if (!data) {
-    // Data is still loading
-    return <div>Loading...</div>;
-  }
-
-  const {
-    dashboard: { stats, graphData, activityData },
-    // users: { customer, seller, admin },
-    ecommerceData: { products, orders, reviews },
-  } = data;
-
+export default function dashboard() {
   return (
     <main>
-      <div className="">
-        <div className="min-h-screen p-8">
-          <Head>
-            <title>Dashboard</title>
-          </Head>
+      <div className="flex items-center justify-center mt-3">
+        <Head>
+          <title>Please Login First</title>
+        </Head>
+        <div className="bg-white p-8 rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold mb-6 text-center text-[#23a888]">
+            Please Login First
+          </h2>
 
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-4">Dashboard Overview</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {Object.entries(stats).map(([key, value]) => (
-                <div key={key} className="bg-white p-4 rounded shadow">
-                  <p className="text-lg font-semibold mb-2">{key}</p>
-                  <p className="text-2xl">{value}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          <div className="flex flex-col items-center justify-center text-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-20 h-20 mx-auto mb-4 text-[#dc5777]"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.5 3.75A1.5 1.5 0 0 0 6 5.25v13.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V15a.75.75 0 0 1 1.5 0v3.75a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3V9A.75.75 0 0 1 15 9V5.25a1.5 1.5 0 0 0-1.5-1.5h-6Zm5.03 4.72a.75.75 0 0 1 0 1.06l-1.72 1.72h10.94a.75.75 0 0 1 0 1.5H10.81l1.72 1.72a.75.75 0 1 1-1.06 1.06l-3-3a.75.75 0 0 1 0-1.06l3-3a.75.75 0 0 1 1.06 0Z"
+                clip-rule="evenodd"
+              />
+            </svg>
 
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Graph Data</h2>
-            {/* Implement your graph component here using graphData.labels and graphData.values */}
-          </div>
+           
+            <p className="text-lg font-semibold text-gray-600">
+              You need to be logged in to access this content.
+            </p>
 
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Recent Activity</h2>
-            <ul className="list-disc pl-6">
-              {activityData.map(({ timestamp, activity, user }, index) => (
-                <li key={index} className="mb-2">
-                  <p>
-                    <span className="font-bold">{user}</span> {activity} on{" "}
-                    {new Date(timestamp).toLocaleString()}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">E-commerce Data</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <h3 className="text-lg font-semibold mb-2">Products</h3>
-                <ul>
-                  {products.map((product) => (
-                    <li key={product.id} className="mb-2">
-                      <span className="font-bold">{product.name}:</span>{" "}
-                      {product.price} - Stock: {product.stock}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-2">Orders</h3>
-                <ul>
-                  {orders.map((order) => (
-                    <li key={order.orderNumber} className="mb-2">
-                      Order {order.orderNumber}: {order.total} by{" "}
-                      {order.customer} on{" "}
-                      {new Date(order.date).toLocaleString()}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            <Link href='/login' className="mt-4 px-4 py-2 bg-[#23a888] hover:bg-[#0c352b] text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#23a888]">
+              Login
+            </Link>
           </div>
         </div>
       </div>

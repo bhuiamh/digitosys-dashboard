@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function DashboardLayout({
+export default function ProductsLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -90,7 +90,7 @@ console.log(pathname, 'pathname>>>>>');
                 className={`${
                   pathname != "/products" ? "text-[#dc5777]" : "text-[#23a888]"
                 } text-xl font-bold text-[#dc5777] font-sans hover:text-[#dc5777]`}
-                href="/products"
+                href="/product"
               >
                 Product
               </Link>

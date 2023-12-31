@@ -88,9 +88,9 @@ console.log(pathname, 'pathname>>>>>');
             <li>
               <Link
                 className={`${
-                  pathname != "/product" ? "text-[#dc5777]" : "text-[#23a888]"
+                  pathname != "/products" ? "text-[#dc5777]" : "text-[#23a888]"
                 } text-xl font-bold text-[#dc5777] font-sans hover:text-[#dc5777]`}
-                href="/product"
+                href="/products"
               >
                 Product
               </Link>
